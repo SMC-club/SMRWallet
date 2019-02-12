@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>SMR_Logo_all1.png</file>
+        <file>SMR.crt</file>
+        <file>SMR.icns</file>
+        <file>SMR.ico</file>
+    </qresource>
+</RCC>
