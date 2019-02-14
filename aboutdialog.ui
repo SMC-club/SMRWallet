@@ -112,7 +112,7 @@
    <item row="2" column="1">
     <widget class="QLabel" name="smrUrl">
      <property name="text">
-      <string>&lt;a href=&quot;https://smr.one/&quot;&gt;https://smr.one&lt;/a&gt;</string>
+      <string>&lt;a href=&quot;http://smc-club.ru&quot;&gt;http://smc-club.ru&lt;/a&gt;</string>
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>
