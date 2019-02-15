@@ -35,8 +35,8 @@ unix {
         # Use Homebrew packages for Mac OS X builds
 
         QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.14
-        BOOST_INCLUDE_PATH += /usr/local/Cellar/boost/1.68.0/include
-        BOOST_LIB_PATH = /usr/local/Cellar/boost/1.68.0/lib
+        BOOST_INCLUDE_PATH += /usr/local/Cellar/boost/1.68.0_1/include
+        BOOST_LIB_PATH = /usr/local/Cellar/boost/1.68.0_1/lib
         BOOST_SUFFIX=-mt
 
         OPENSSL_INCLUDE_PATH += /usr/local/Cellar/openssl/1.0.2q/include
@@ -74,7 +74,7 @@ win32 {
         INCLUDEPATH += C:\MyProjects\deps_src\boost_1_68_0\stage\lib\
 
         LIBS += -LC:\MyProjects\deps\smrlibpp-static\lib -lsecp256k1 -lxrpl_core
-        LIBS += -LC:\MyProjects\deps\openssl-static\lib -llibeay32 -lssleay32 -llegacy_stdio_definitions -ladvapi32 -lgdi32
+        LIBS += -LC:\MyProjects\deps\openssl-static\lib -llibeay32 -lssleay32 -ladvapi32 -lgdi32
         LIBS += -LC:\MyProjects\deps_src\boost_1_68_0\stage\lib \
                 \
                 -llibboost_atomic-vc141-mt-s-x64-1_68 \
