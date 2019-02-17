@@ -11,9 +11,24 @@ Only 64-bit operation systems are supported.
 3. Run qmake_env_static.cmd and use opened command prompt for the next actions.
 3. Clone this repository:
     git clone http://github.com/RussianMiningCoin/SMRWallet
-4. Run the following commands:
+4. Open x64 Visual Studio 2017 Native CMD
+5. Prepare paths for qmake-static, boost_1.68, use vcpkg to install static libs of protobuf openssl and zlib
+6. Run the following commands:
 ```
+    call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+    set PATH=%PATH%C:\MyProjects\deps\qt-static\bin;C:\MyProjects;
+    set LIBPATH=%LIBPATH%C:\local\boost_1_68_0\lib;
+    set INCLUDE=%INCLUDE%C:\local\boost_1_68_0;
+    set LIBPATH=%LIBPATH%C:\MyProjects\deps\qt-static\lib;
+    set INCLUDE=%INCLUDE%C:\MyProjects\deps\qt-static\include;
+    set QTDIR=C:\MyProjects\deps\qt-static
+    set OPENSSL_ROOT_DIR=C:\vcpkg\installed\x64-windows-static
+    set BOOST_ROOT=C:\local\boost_1_68_0
+
+
     cd SMRWallet
+    C:\MyProjects\deps\qt-static\bin\qmake ..
+    nmake /f Makefile.Release
     mkdir build
     cd build && qmake ..
     nmake
