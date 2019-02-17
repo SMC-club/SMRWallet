@@ -23,8 +23,8 @@ CONFIG += c++14
 
 #QMAKE_CXXFLAGS = -std=c++14
 
-BOOST_INCLUDE_PATH=../boost_1_68_0/include
-BOOST_LIB_PATH=../boost_1_68_0/lib
+BOOST_INCLUDE_PATH=C:\local\boost_1_68_0
+BOOST_LIB_PATH=C:\local\boost_1_68_0\stage\lib
 BOOST_SUFFIX=
 
 OPENSSL_INCLUDE_PATH=
@@ -68,14 +68,13 @@ unix {
 }
 
 win32 {
-        INCLUDEPATH += C:\MyProjects\deps\smrlibpp-static\include
+        INCLUDEPATH += C:\local\smrd\include
+        INCLUDEPATH += C:\vcpkg\installed\x64-windows-static\include
+        INCLUDEPATH += C:\local\boost_1_68_0
 
-        INCLUDEPATH += C:\MyProjects\deps\openssl-static\include
-        INCLUDEPATH += C:\MyProjects\deps_src\boost_1_68_0\stage\lib\
-
-        LIBS += -LC:\MyProjects\deps\smrlibpp-static\lib -lsecp256k1 -lxrpl_core
-        LIBS += -LC:\MyProjects\deps\openssl-static\lib -llibeay32 -lssleay32 -ladvapi32 -lgdi32
-        LIBS += -LC:\MyProjects\deps_src\boost_1_68_0\stage\lib \
+        LIBS += -LC:\local\smrd\lib -lsecp256k1 -lxrpl_core
+        LIBS += -LC:\vcpkg\installed\x64-windows-static\lib -llibeay32 -lssleay32 -llegacy_stdio_definitions -ladvapi32 -lgdi32
+        LIBS += -LC:\local\boost_1_68_0\stage\lib \
                 \
                 -llibboost_atomic-vc141-mt-s-x64-1_68 \
                 -llibboost_chrono-vc141-mt-s-x64-1_68 \
